@@ -41,6 +41,10 @@ const App2 = () => {
         return <Quiz onSubmit={handleQuizSubmit} />;
     }
 
+    if (!questionsData) {
+        return <p>Loading question...</p>
+    }
+
     if (isCorrect === null) {
         return (
             <Questions
